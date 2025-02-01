@@ -84,8 +84,9 @@ export default function CardComponent() {
                     src={card.imageUrl}
                     alt={card.title}
                     fill
+                    sizes='500px'
                     className="object-cover"
-                    priority={index < 4} // Preload the first 4 images
+                    priority // Preload the first 4 images
                   />
                 </div>
 

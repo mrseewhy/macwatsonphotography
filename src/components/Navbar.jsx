@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { MailCheck, Menu, X, Twitter, Instagram } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -29,10 +29,10 @@ const Layout = ({ children }) => {
   ];
 
   const socialLinks = [
-    { Icon: Facebook, href: '#', label: 'Facebook' },
-    { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { Icon: Instagram, href: '#', label: 'Instagram' },
-    { Icon: Youtube, href: '#', label: 'YouTube' }
+    { Icon: MailCheck, href: 'mailto:Macwatsonphotos@gmail.com', label: 'Email' },
+    { Icon: Instagram, href: 'https://www.instagram.com/macwatsonphotography', label: 'Instagram' },
+    { Icon: Instagram, href: 'https://www.instagram.com/aduke_films', label: 'Instagram 2' },
+    { Icon: Twitter, href: 'https://x.com/macwatson20', label: 'X (Twitter)' }
   ];
 
   const thisYear = new Date().getFullYear();

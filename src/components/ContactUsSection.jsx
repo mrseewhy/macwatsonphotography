@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { MailCheck, PhoneCall, Phone, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 export default function ContactUsSection() {
   return (
@@ -30,18 +30,18 @@ export default function ContactUsSection() {
             <div className="flex space-x-6 mb-8">
               <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center">
                 <a
-                  href="https://instagram.com"
+                  href="mailto:macwatsonphotos@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-pink-600 transition-colors"
-                  aria-label="Instagram"
+                  aria-label="Email"
                 >
-                  <Instagram size={28} />
+                  <MailCheck size={28} />
                 </a>
               </div>
               <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center">
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/macwatson20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-blue-500 transition-colors"
@@ -52,24 +52,24 @@ export default function ContactUsSection() {
               </div>
               <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.instagram.com/macwatsonphotography"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-blue-700 transition-colors"
-                  aria-label="LinkedIn"
+                  aria-label="Instagram"
                 >
-                  <Linkedin size={28} />
+                  <Instagram size={28} />
                 </a>
               </div>
               <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center">
                 <a
-                  href="https://youtube.com"
+                  href="https://www.instagram.com/aduke_films"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-red-600 transition-colors"
-                  aria-label="YouTube"
+                  aria-label="Instagram"
                 >
-                  <Youtube size={28} />
+                  <Instagram size={28} />
                 </a>
               </div>
             </div>
@@ -77,21 +77,56 @@ export default function ContactUsSection() {
             {/* Cards for Contact Information */}
             <div className="space-y-4">
               {/* Email Card */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2 font-exo">Email</h3>
-                <p className="text-gray-700 font-lato">me@me.com</p>
+              
+              <div className="bg-gray-100 p-6 rounded-lg shadow-md flex items-center gap-4">
+              {/* Lucide Mail Icon */}
+                <div className='bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center'>
+                  <MailCheck className="w-6 h-6 text-gray-50" />
+                </div>
+                {/* Email Text */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-1 font-exo">Email</h3>
+                  <p className="text-gray-800 font-lato">
+                    <a href="mailto:macwatsonphotos@gmail.com" className="hover:underline">
+                      macwatsonphotos@gmail.com
+                    </a>
+                  </p>
+                </div>
               </div>
 
               {/* Phone Card */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2 font-exo">Phone</h3>
-                <p className="text-gray-700">+234 858 858</p>
+              <div className="bg-gray-100 p-6 rounded-lg shadow-md flex items-center gap-4">
+                {/* Lucide Phone Icon */}
+                <div className='bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center'>
+                  <PhoneCall className="w-6 h-6 text-gray-50" />
+                </div>
+                {/* Phone Text */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-1 font-exo">Phone</h3>
+                  <p className="text-gray-800 font-lato">
+                    <a href="tel:2348021063688" className="hover:underline">
+                    +234 802 106 3688
+                    </a>
+                  </p>
+                </div>
               </div>
+              
 
               {/* WhatsApp Card */}
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2 font-exo">WhatsApp</h3>
-                <p className="text-gray-700 font-lato">+234 696 969 69</p>
+              <div className="bg-gray-100 p-6 rounded-lg shadow-md flex items-center gap-4">
+                {/* Lucide Phone Icon */}
+                <div className='bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center'>
+                  <Phone className="w-6 h-6 text-gray-50" />
+                </div>
+                {/* Phone Text */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-1 font-exo">WhatsApp</h3>
+                  <p className="text-gray-800 font-lato">
+                    <a href="tel:2348021063688" className="hover:underline">
+                    +234 802 106 3688
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

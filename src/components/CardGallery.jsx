@@ -98,6 +98,8 @@ export default function CardsGallery() {
                   alt={`Gallery Image ${image.id}`}
                   fill
                   className="object-cover"
+                  priority
+                  sizes='500px'
                 />
               </div>
             </div>

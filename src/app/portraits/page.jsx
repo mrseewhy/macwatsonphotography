@@ -1,6 +1,10 @@
 import CardComponent from '@/components/PortraitsCards'
 import React from 'react'
 
+export const metadata = {
+  title: "Macwatson Photography | Portraits",
+};
+
 const page = () => {
   return (
     <div>

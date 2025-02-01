@@ -1,5 +1,8 @@
 import CardsGallery from "@/components/CardGallery"
 
+export const metadata = {
+  title: "Macwatson Photography | Card Gallery",
+};
 
 const page = () => {
   return (
