@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Layout from "@/components/Navbar";
 import { Exo, Lato } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const exo = Exo({
   subsets: ['latin'],
@@ -41,6 +43,8 @@ export default function RootLayout({ children }) {
 >
       <Layout>
           {children}
+          <Analytics/>
+          <SpeedInsights/>
         </Layout>
         
       </body>

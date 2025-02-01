@@ -5,7 +5,7 @@ import { Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 export default function ContactUsSection() {
   return (
-    <div className="p-4">
+    <div className="p-4 mb-12">
       {/* Section with Image and Contact Info */}
       <div className="flex flex-col md:flex-row gap-8">
         {/* Image on the Left (Top on Mobile) */}
@@ -24,7 +24,7 @@ export default function ContactUsSection() {
         <div className="flex-1 flex items-center">
           <div className="text-left w-full">
             {/* Header */}
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-exo">Contact Me</h2>
+            <h2 className="text-3xl font-bold mb-6 font-exo">Contact Me</h2>
             <p className='text-gray-800 font-lato mb-4'>MacWatson Photography is based in Lagos, Nigeria, and available for local & international assignments.</p>
             {/* Social Media Icons */}
             <div className="flex space-x-6 mb-8">

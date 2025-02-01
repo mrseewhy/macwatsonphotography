@@ -85,7 +85,7 @@ export default function Gallery() {
   const filteredImages = filter === 'all' ? images : images.filter((img) => img.category === filter);
 
   return (
-    <div className="p-4 mt-16">
+    <div className="p-4 mt-16 mb-12">
       {/* Filter Section - Updated for better mobile responsiveness */}
       <div className="mb-8">
         <div className="flex flex-wrap gap-2 text-sm font-lato">

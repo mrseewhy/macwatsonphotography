@@ -1,9 +1,11 @@
+import PublishedCards from '@/components/PublishedCards'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      Hello  published
+      <div className=' p-4'><h2 className='text-3xl  font-bold font-exo'>Published Works</h2></div>
+      <PublishedCards/>
     </div>
   )
 }
