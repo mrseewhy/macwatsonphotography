@@ -1,4 +1,5 @@
 import CardComponent from '@/components/PrintsCards'
+import CardsGallery from '@/components/PrintsGallery';
 import React from 'react'
 
 
@@ -10,7 +11,8 @@ const page = () => {
   return (
     <div>
       <div className=' p-4'><h2 className='text-3xl  font-bold font-exo'>Prints</h2></div>
-      <CardComponent/>
+      {/* <CardComponent/> */}
+      <CardsGallery/>
     </div>
   )
 }

@@ -8,18 +8,22 @@ const ImageSkeleton = ({ className = '' }) => (
 );
 
 const images = [
-  { id: 1, src: "https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg", alt: 'Image 1', category: 'Stories', size: 'small' },
-  { id: 2, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367317/PRINTS_1_rioaiv.jpg', alt: 'Image 2', category: 'Published works', size: 'large' },
-  { id: 3, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367306/PRINTS_2_iaatwf.jpg', alt: 'Image 3', category: 'Portraits', size: 'medium' },
-  { id: 4, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738366433/macwatson/twsdyvfwphntz3c40kvs.jpg', alt: 'Image 4', category: 'Drone shots', size: 'small' },
-  { id: 5, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367786/PRINTS_4_gkoiis.jpg', alt: 'Image 5', category: 'Prints', size: 'large' },
-  { id: 6, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367595/Image_10-12-2024_at_23.48_cnelfc.jpg', alt: 'Image 6', category: 'Drone shots', size: 'medium' },
-  { id: 7, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367589/Image_07-01-2025_at_06.58_vjeqtb.jpg', alt: 'Image 7', category: 'Drone shots', size: 'small' },
-  { id: 8, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367590/Image_07-01-2025_at_06.55_ukltnp.jpg', alt: 'Image 8', category: 'Prints', size: 'small' },
-  { id: 9, src: '/images/1.jpg', alt: 'Image 9', category: 'Prints', size: 'medium' },
-  { id: 10, src: '/images/1.jpg', alt: 'Image 10', category: 'Published works', size: 'small' },
-  { id: 11, src: '/images/1.jpg', alt: 'Image 11', category: 'Stories', size: 'large' },
-  { id: 12, src: '/images/1.jpg', alt: 'Image 12', category: 'Stories', size: 'small' }
+  { id: 1, src: "https://res.cloudinary.com/dvmobuvar/image/upload/v1738367317/PRINTS_1_rioaiv.jpg", alt: 'Image 1', category: 'Portraits', size: 'small' },
+  { id: 2, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738432434/dji_fly_20241119_142052_108_1732047499230_photo_x04pgu.jpg', alt: 'Image 2', category: 'Drone shots', size: 'large' },
+  { id: 3, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367306/PRINTS_2_iaatwf.jpg', alt: 'Image 3', category: 'Portraits', size: 'small' },
+  { id: 4, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738367590/Image_07-01-2025_at_06.55_ukltnp.jpg', alt: 'Image 3', category: 'Portraits', size: 'small' },
+  { id: 5, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738431629/DSC_0041_2_sosoeu.jpg', alt: 'Image 4', category: 'Stories', size: 'small' },
+  { id: 6, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367786/PRINTS_4_gkoiis.jpg', alt: 'Image 5', category: 'Portraits', size: 'large' },
+  // { id: 7, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367595/Image_10-12-2024_at_23.48_cnelfc.jpg', alt: 'Image 6', category: 'Drone shots', size: 'small' },
+  { id: 8, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433582/DSC_0205_2_p0cdbi.jpg', alt: 'Image 6', category: 'Prints', size: 'small' },
+  { id: 9, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738431620/DSC_0091_dxkmqt.jpg', alt: 'Image 7', category: 'Stories', size: 'small' },
+  { id: 10, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433584/DSC_0170_rmtktc.jpg', alt: 'Image 8', category: 'Prints', size: 'small' },
+  { id: 11, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433567/IMG_3816_lnuxnh.jpg', alt: 'Image 9', category: 'Prints', size: 'small' },
+  { id: 12, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433564/DSC_0077_3_2_qigdlb.jpg', alt: 'Image 9', category: 'Published works', size: 'small' },
+  { id: 13, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738432431/dji_fly_20241120_153842_121_1732170544059_photo_2_g4xmit.jpg', alt: 'Image 11', category: 'Drone shots', size: 'large' },
+  { id: 14, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738431619/_ARW7750_2_prghjn.jpg', alt: 'Image 12', category: 'Published works', size: 'small' },
+  { id: 15, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738431612/DSC_0090_1_2_jwla2n.jpg', alt: 'Image 12', category: 'Published works', size: 'small' },
+  { id: 16, src: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738431611/IMG_3888_nexoiq.jpg', alt: 'Image 12', category: 'Stories', size: 'small' },
 ];
 
 const categories = ['all', 'Stories', 'Published works', 'Portraits', 'Drone shots', 'Prints'];

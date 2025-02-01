@@ -1,4 +1,5 @@
 import CardComponent from '@/components/DroneCards'
+import CardsGallery from '@/components/DroneGallery';
 import React from 'react'
 
 export const metadata = {
@@ -9,7 +10,8 @@ const page = () => {
   return (
     <div>
       <div className=' p-4'><h2 className='text-3xl  font-bold font-exo'>Drone Shots</h2></div>
-      <CardComponent/>
+      {/* <CardComponent/> */}
+      <CardsGallery/>
     </div>
   )
 }
