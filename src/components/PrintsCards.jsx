@@ -1,57 +1,69 @@
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 // Data for the cards
 const cardsData = [
   {
-    title: 'Card 1',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
+    title: 'It takes a village',
+    price: '$100',
+    number: '0-10',
+    inches: '12 by 15 inches',
+    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433584/DSC_0170_rmtktc.jpg',
   },
   {
-    title: 'Card 2',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
+    title: 'TIRED BODY, VIBRANT SOUL',
+    price: '$100',
+    number: '0-10',
+    inches: '12 by 15 inches',
+    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433567/IMG_3816_lnuxnh.jpg',
   },
   {
-    title: 'Card 3',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
+    title: 'HIGH FASHION',
+    price: '$100',
+    number: '0-10',
+    inches: '12 by 15 inches',
+    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433582/DSC_0205_2_p0cdbi.jpg',
   },
   {
-    title: 'Card 4',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
+    title: 'SOLACE',
+    price: '$100',
+    number: '0-10',
+    inches: '12 by 15 inches',
+    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433564/DSC_0077_3_2_qigdlb.jpg',
   },
   {
-    title: 'Card 5',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
+    title: 'OLOKUN',
+    price: '$100',
+    number: '0-10',
+    inches: '12 by 15 inches',
+    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/v1738433569/_ARW7736_2_uxwe2k.jpg',
   },
-  {
-    title: 'Card 6',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
-  },
-  {
-    title: 'Card 7',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
-  },
-  {
-    title: 'Card 8',
-    imageUrl: 'https://res.cloudinary.com/dvmobuvar/image/upload/w_1000/q_auto/f_auto/v1738367323/PRINTS_behphu.jpg',
-    url: '/cards-gallery',
-  },
+  
 ];
+
+const ImageModal = ({ imageUrl, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50" onClick={onClose}>
+      <div className="relative max-w-full max-h-full">
+        <Image
+          src={imageUrl}
+          alt="Full size"
+          width={800}
+          height={600}
+          objectFit="contain"
+        />
+      </div>
+    </div>
+  );
+};
 
 export default function CardComponent() {
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    // Simulate a 2-second loading delay
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -61,7 +73,6 @@ export default function CardComponent() {
 
   return (
     <div className="p-4 mb-12">
-      {/* Skeleton Loader or Card Grid */}
       {isLoading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {Array.from({ length: 8 }).map((_, index) => (
@@ -76,31 +87,32 @@ export default function CardComponent() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cardsData.map((card, index) => (
-            <Link href={card.url} key={index} className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300">
-                {/* Image */}
-                <div className="relative h-96">
+            <div key={index} className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="relative h-96 cursor-pointer" onClick={() => setSelectedImage(card.imageUrl)}>
                   <Image
                     src={card.imageUrl}
                     alt={card.title}
                     fill
                     sizes='500px'
                     className="object-cover"
-                    priority // Preload the first 4 images
+                    priority
                   />
                 </div>
-
-                {/* Title */}
                 <div className="p-4 bg-gray-100">
-                  <h3 className="text-xl font-exo font-semibold text-black hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-xl uppercase font-exo font-semibold text-black hover:text-gray-800 transition-colors duration-300">
                     {card.title}
                   </h3>
+                  <p className='font-lato text-black'>{card.inches}</p>
+                  <p className='font-lato text-black'>{card.number}</p>
+                  <p className='font-lato text-black'>{card.price}</p>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       )}
+      {selectedImage && <ImageModal imageUrl={selectedImage} onClose={() => setSelectedImage(null)} />}
     </div>
   );
 }
