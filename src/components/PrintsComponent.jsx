@@ -23,11 +23,8 @@ export default function ImageTextSection() {
         <div className="flex-1 flex items-center">
           <div className="text-left">
             <h2 className="text-3xl font-exo font-bold mb-4">Buy or gift a friend a print.</h2>
-            <p className="text-gray-800 font-lato mb-4">
-            As an independent female storyteller, I&#39;ve travelled across several states in Nigeria exploring the beautiful and diverse culture Nigeria is blessed with, from dressing to architecture to food. I have interacted and had deep conversation with different people of different backgrounds. Each self-funded travel comes with its own experiences, from good to bad. Haha! I&#39;ve learnt and developed life lessons also.</p>
-
-            {/* <p className="text-gray-800 font-lato mb-4">I will be selling prints of  these 5 curated photographs, limited editions. Each print will be signed and assigned a certificate of authenticity. If you want your prints framed, that will be done for free. 
-          </p> */}
+           
+            
           <p className="text-gray-800 font-lato mb-4"> This are handpicked fine art portrait, limited edition, carefully selected  Each print will be signed and assigned a certificate of authenticity. If you want your prints framed, that will be done for free. </p>
 
           <p className="text-gray-800 font-lato mb-4">Print material : Art - Archival Matte Paper</p>
